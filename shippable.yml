@@ -17,8 +17,10 @@ build:
     - wget https://github.com/jjhelmus/test_aarch_ci_build/releases/download/0.0.1/testconda-0.0.1-Linux-aarch64.sh -O miniconda.sh
     - bash miniconda.sh -b -p $HOME/miniconda
     - export PATH="$HOME/miniconda/bin:$PATH"
+    - conda config --set always_yes yes --set changeps1 no
     - conda info -a
-    - conda build --python 3.7 imagesize
+    - conda install -q -c jjhelmus/label/aarch64_bootstrap conda-build
+    - conda build -c jjhelmus/label/aarch64_bootstrap --python 3.7 imagesize
 
 integrations:
 
