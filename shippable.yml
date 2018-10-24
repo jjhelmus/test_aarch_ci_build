@@ -14,7 +14,7 @@ python:
 build:
 
   ci:
-    - docker run -it arm64v8/centos:7 cat /etc/redhat-release
+    - docker run arm64v8/centos:7 cat /etc/redhat-release
    #- wget https://github.com/jjhelmus/test_aarch_ci_build/releases/download/0.0.1/testconda-0.0.1-Linux-aarch64.sh -O miniconda.sh
    #- bash miniconda.sh -b -p $HOME/miniconda
    #- export PATH="$HOME/miniconda/bin:$PATH"
