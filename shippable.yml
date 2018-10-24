@@ -20,7 +20,8 @@ build:
     - conda config --set always_yes yes --set changeps1 no
     - conda info -a
     - conda install -q -c jjhelmus/label/aarch64_bootstrap conda-build
-    - conda build -c jjhelmus/label/aarch64_bootstrap --python 3.7 imagesize
+    #- conda build -c jjhelmus/label/aarch64_bootstrap --python 3.7 imagesize
+    - conda build -c jjhelmus/label/aarch64_bootstrap --python 3.7 psutil
 
 integrations:
 
