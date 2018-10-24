@@ -1,0 +1,29 @@
+language: python
+
+runtime:
+  nodePool: shippable_shared_aarch64
+
+branches:
+  only:
+    - master
+
+python: 
+  - 2.7
+
+
+build:
+
+  ci:
+    - cat /etc/issue
+    - lscpu
+    - python -V
+    - pip --version
+
+integrations:
+
+  notifications:
+    - integrationName: email
+      type: email
+      on_success: change
+      on_failure: always
+      on_pull_request: never
